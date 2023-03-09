@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #452194;
+  font-family: "Roboto", sans-serif;
+  background-color: #fbf9ff;
+}
+
+#counter {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 205px;
+  height: 205px;
+  background-color: #fbf9ff;
+  box-shadow: inset 0px 0px 0px 5px #452194, inset 0px 0px 0px 10px #ccb9fe,
+    inset 0px 0px 0px 15px #452194;
+  border-radius: 100%;
+  z-index: 20;
+}
+
+#counter h6 {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  font-weight: 900;
+  font-size: 60px;
+  text-align: center;
+  position: relative;
+  top: 60px;
+  left: 40px;
+}
+
+#counter p {
+  position: absolute;
+  bottom: 70px;
+  right: 45px;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.questionContainer {
+  min-height: 100vh;
+  padding: 10vh 60px;
+}
+
+h2 {
+  width: 65vw;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 120%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-left: 45px;
+  position: relative;
+  z-index: 1;
+  text-shadow: -1px 1px #452194, -2px 2px #ccb9fe, -3px 3px #ccb9fe,
+    -4px 4px #ccb9fe;
+}
+
+.answerContainer {
+  display: flex;
+  align-items: flex-end;
+  margin-top: -30px;
+}
+
+img {
+  height: 58vh;
+  width: 30vw;
+  object-fit: cover;
+}
+
+.buttonDiv {
+  width: 70vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 260px));
+  grid-gap: 50px;
+  margin: 0 45px 30px;
+}
+
+#result {
+  background-color: #8cefdd;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#result h2 {
+  color: white;
+  text-shadow: -1px 1px white, -2px 2px #452194, -3px 3px #452194,
+    -4px 4px #452194;
+  position: static;
+  margin-left: 90px;
+}
+
+button {
+  width: 260px;
+  height: 87px;
+  color: #452194;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  border: none;
+  background-color: #fbf9ff;
+  box-shadow: inset 0px 0px 0px 5px #452194, inset 0px 0px 0px 10px #8cefdd,
+    inset 0px 0px 0px 15px #452194, -10px 10px 0px -5px #ccb9fe,
+    -10px 10px 0px 0px #452194;
+  transition: 0.1s;
+}
+
+button:hover {
+  transform: translate(5px, -5px);
+  
+}
+
+button:active {
+  transform: translate(-10px, 10px);
+  box-shadow: inset 0px 0px 0px 5px #452194, inset 0px 0px 0px 10px #8cefdd,
+    inset 0px 0px 0px 15px #452194, 0px 0px 0px -5px #ccb9fe,
+    0px 0px 0px 0px #452194;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button[disabled].right,
+button[disabled]:hover.right {
+  box-shadow: inset 0px 0px 0px 5px #452194, inset 0px 0px 0px 10px #0eff8b,
+    inset 0px 0px 0px 15px #452194, -10px 10px 0px -5px #86ffc4,
+    -10px 10px 0px 0px #452194;
+}
+
+button[disabled].false,
+button[disabled]:hover.false {
+  transform: translate(0, 0);
+  box-shadow: inset 0px 0px 0px 5px #452194, inset 0px 0px 0px 10px #f93434,
+    inset 0px 0px 0px 15px #452194, -10px 10px 0px -5px #fb9999,
+    -10px 10px 0px 0px #452194;
+}
+
+button[disabled],
+button[disabled]:hover {
+  transform: translate(0, 0);
+  opacity: 0.5;
+  box-shadow: inset 0px 0px 0px 5px #452194, inset 0px 0px 0px 10px #fbf9ff,
+    inset 0px 0px 0px 15px #452194, -10px 10px 0px -5px #fbf9ff,
+    -10px 10px 0px 0px #452194;
+}
+
+@media(max-width:767px) {
+    .answerContainer {
+        display: block;
+    }
+    img{
+        height: 50vh;
+        width: 50vw;
+    }
+}
